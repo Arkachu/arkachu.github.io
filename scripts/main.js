@@ -194,7 +194,8 @@ bouton1.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton2 */
 bouton2.addEventListener('click', function() {
     nbJoueurs = 2;
@@ -226,7 +227,8 @@ bouton2.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton3 */
 bouton3.addEventListener('click', function() {
     nbJoueurs = 3;
@@ -258,7 +260,8 @@ bouton3.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton4 */
 bouton4.addEventListener('click', function() {
     nbJoueurs = 4;
@@ -290,7 +293,8 @@ bouton4.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton5 */
 bouton5.addEventListener('click', function() {
     nbJoueurs = 5;
@@ -322,7 +326,8 @@ bouton5.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton6 */
 bouton6.addEventListener('click', function() {
     nbJoueurs = 6;
@@ -354,7 +359,8 @@ bouton6.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton7 */
 bouton7.addEventListener('click', function() {
     nbJoueurs = 7;
@@ -386,7 +392,8 @@ bouton7.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton8 */
 bouton8.addEventListener('click', function() {
     nbJoueurs = 8;
@@ -418,7 +425,8 @@ bouton8.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton9 */
 bouton9.addEventListener('click', function() {
     nbJoueurs = 9;
@@ -450,7 +458,8 @@ bouton9.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton10 */
 bouton12.addEventListener('click', function() {
     nbJoueurs = 10;
@@ -482,7 +491,8 @@ bouton12.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton11 */
 bouton11.addEventListener('click', function() {
     nbJoueurs = 11;
@@ -514,7 +524,8 @@ bouton11.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
+
 /* Ajout d'une action au bouton12 */
 bouton12.addEventListener('click', function() {
     nbJoueurs = 12;
@@ -546,7 +557,7 @@ bouton12.addEventListener('click', function() {
     boutonGaby.hidden = false;
     boutonEttore.hidden = false;
     boutonRetourJoueurs.hidden = false;
-})
+});
 
 /* Ajout d'une action au bouton retour joueurs */
 boutonRetourJoueurs.addEventListener('click', function() {
@@ -577,4 +588,283 @@ boutonRetourJoueurs.addEventListener('click', function() {
     boutonGaby.hidden = true;
     boutonEttore.hidden = true;
     boutonRetourJoueurs.hidden = true;
+});
+
+let joueurs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+/* Ajout des évènements aux boutons de sélection des personnages */
+boutonAnat.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Anat';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonAnat.disabled = true;
+    }
+});
+
+boutonAntho.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Antho';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonAntho.disabled = true;
+    }
+});
+
+boutonMathis.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Mathis';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonMathis.disabled = true;
+    }
+});
+
+boutonDoume.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Doume';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonDoume.disabled = true;
+    }
+});
+
+boutonLoic.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Loic';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonLoic.disabled = true;
+    }
+});
+
+boutonThib.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Thib';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonThib.disabled = true;
+    }
+});
+
+boutonKelvin.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Kelvin';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonKelvin.disabled = true;
+    }
+});
+
+boutonNico.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Nico';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonNico.disabled = true;
+    }
+});
+
+boutonLeo.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Leo';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonLeo.disabled = true;
+    }
+});
+
+boutonLucien.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Lucien';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonLucien.disabled = true;
+    }
+});
+
+boutonGaby.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Gaby';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonGaby.disabled = true;
+    }
+});
+
+boutonEttore.addEventListener('click', function() {
+    joueurs[Joueur - 1] = 'Ettore';
+    Joueur++;
+    if (Joueur === nbJoueurs + 1) {
+        boutonAnat.hidden = true;
+        boutonAntho.hidden = true;
+        boutonMathis.hidden = true;
+        boutonDoume.hidden = true;
+        boutonLoic.hidden = true;
+        boutonThib.hidden = true;
+        boutonKelvin.hidden = true;
+        boutonNico.hidden = true;
+        boutonLeo.hidden = true;
+        boutonLucien.hidden = true;
+        boutonGaby.hidden = true;
+        boutonEttore.hidden = true;
+        boutonRetourJoueurs.hidden = true;
+        titre.textContent = 'Jeu en cours'
+    } else {
+        boutonEttore.disabled = true;
+    }
 });
