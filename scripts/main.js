@@ -1316,25 +1316,93 @@ let eventsSoiree = [
 
 /* Evenements Aix */
 let eventsAix = [
-    "Pas encore fait connard"
+    "Lundipéro : tout le monde boit 3 gorgées.",
+    "Sacré Coeur : tous ceux qui n'étaient pas a Sacré Coeur boivent 2 gorgées.",
+    "Cezanne : tous ceux qui n'étaient pas à Cezanne boivent 2 gorgées.",
+    "Tu gagnes en 1vs1 contre Lucien sur Fornite : ta street cred augmente, celle de Lucien baisse.",
+    "Tu as la chiasse au juste à côté : ta street cred descend, bois 2 gorgées pour remplir ce que tu viens de vider.",
+    "Tu meurs d'une flèche dans le jardin de Loic : passe le prochain tour, Loic immunisé.",
+    "Tu fais un 1vs1 contre un clochard : ta street cred augmente, bois 2 gorgées avec lui (tu le designes).",
+    "Tu soudoies le videur : ta street cred augmente.",
+    "Tu vomis sur le lieu de ton travail : bois 2 gorgées pour éviter la gueule de bois, Anat immunisé.",
+    "Tu crées le son de l'été avec Doume : bois 2 gorgées avec Doume.",
+    "Tu frappes des gays avec Mathis : bois 1 gorgée, Mathis ne boit pas au prochain tour.",
+    "Tu frappes des étrangers avec Lucien : bois 1 gorgée avec Lucien, Lucien ne boit pas au prochain tour.",
+    "Tu skies avec Gaby et Kelvin : tu rates le dernier télésiège parce qu'ils sont trop lents, passe le prochain tour, Leo, Gaby, Ettore et Kelvin immunisés.",
+    "Tu te fais bouger par les chevaux de Gaby : va à l'hôpital, Gaby immunisé.",
+    "Doume se fout de toi dans un de ses sons : bois 2 gorgées et mange ton seum.",
+    "Tu te fais courser par les flics : bois 3 gorgées apres leur avoir échappé ou va au commissariat, Gaby et Ettore immunisés.",
+    "Anat te ramene de soirée (tu fais un détour au commissariat) : retourne au commissariat.",
+    "Thib vomit dans les toilettes : tu l'abandonnes ou tu bois 1 gorgée.",
+    "Tu te fais recaler : recule de 3 cases.",
+    "Doume réussit à chopper avec toi le num de sa voisine : bois 2 gorgées avec Doume pour fêter ça.",
+    "Tu fais la tournée du capitaine : ta street cred augmente, bois 5 gorgées et ne bois pas au prochain tour.",
+    "Début d'une course au feu de bellegarde : défie quelqu'un et finissez votre verre le plus vite possible.",
+    "Leo te trace en ski , tu te perds : passe le prochain tour, Leo immunisé.",
+    "Tu ramènes Ettore à la panda : retourne à la panda, Ettore et Gaby immunisés.",
+    "Tu ramènes Anat à la panda : retourne à la panda, Anat et Lucien immunisés.",
+    "Baston : Kelvin bois 1 gorgée.",
+    "Kelvin te tue à l'arme blanche : passe le prochain tour",
+    "Tu vas toucher : bois 2 gorgées.",
+    "Dedel parle avec toi toute la soirée : bois 1 gorgée et bois 2 fois plus au prochain tour.",
+    "Angello t'accostes : Anat doit fermer sa gueule pendant 2 minutes.",
+    "Les petits du parc te proposent de la beuh : bois 1 gorgée à leur santé.",
+    "Le père de gab mixe avec toi : ta streetcred augmente.",
+    "Tu gagnes une partie de cache-cache : ta streetcred aumente, bois 2 gorgées pour fêter ça."
 ]
 
 /* Evenements plage */
 let eventsPlage = [
-    "Suce"
+    "Tu prends des champignons : bois 3 gorgées.",
+    "Tu regardes des jolies fesses avec les lunettes fesses : bois 1 gorgée en profitant du paysage.",
+    "Nico te plaque sur la plage : retourne à l'hôpital, Nico immunisé.",
+    "Gaby et Lucien partent en mer avec toi : la petite virée est sympathique.",
+    "Gaby et Lucien partent en mer avec toi : vous coulez, retourne à l'hôpital avec eux.",
+    "Tu arrives sur la plage avec Nico et Mathis : ta streetcred diminue, bois 2 gorgées.",
+    "Thib et Antho lancent leur danse : tout le monde boit 3 gorgées.",
+    "Tu te bats contre des mecs armés de pétards sur la plage : retourne à l'hôpital, Kelvin, Antho et Nico immunisés.",
+    "Gaby rate son salto : Gaby retourne à l'hôpital."
 ]
 
 /* Evenements camping */
 let eventsCamping = [
-    "Avale mon chibre"
+    "Tu gagnes Antho à la pétanque : ta streetcred augmente, bois 2 gorgées car on ne joue jamais sans se rafraîchir.",
+    "Tu rencontres une milf avec des enfants et de l'argent et des gros seins : elle t'offre à boire 3 gorgées.",
+    "Tu voles un panneau : bois 3 gorgées pour t'en rappeler, Nico immunisé.",
+    "Tu voles un transpalette : bois 3 gorgées pour esquiver Wakanda, Ettore immunisé.",
+    "Tu te bats avec wakanda : retourne à l'hôpital.",
+    "Tu finis premier du classement gay : bois 5 gorgées.",
+    "Ettore te prépare des pâtes à la bière : tu bois avec un joueur qu'Ettore désigne.",
+    "Tu chantes sous les douches avec tout le monde : tout le monde boit 4 gorgées.",
+    "Tu rejoues les scènes du roi lion : ta streetcred augmente, Loic choisit quelqu'un qui boit.",
+    "Anat et Loic t'incrustent dans un groupe sur la plage : choisis quelqu'un qui boira avec toi au prochain tour.",
+    "Tu rencontres des anglaises avec Thib : ceux qui sont nuls en anglais boivent.",
+    "Antho te parle pétanque : bois 2 gorgées parce que la pétanque c'est sacré, Antho immunisé.",
+    "Tu réussis à congeler de l'alcool : bois 4 gorgées pour fêter ca.",
+    "Petit dej au pastis avec céréales à la bière : bois 3 gorgées pour accompagner le tout, Nico immunisé.",
+    "Tu te fais chopper en train de chier sur le canap du voisin : bois 2 gorgées, Doume et Kelvin immunisés."
 ]
 
 /* Evenements campanets */
 let eventsCampanets = [
-    "Couscous garni"
+    "Le DJ disparaît : buvez 1 gorgée en l'attendant.",
+    "Tu abîmes le mobilier : bois 2 gorgées pour le réparer.",
+    "Tu dors dans la cheminée : ta streetcred diminue, bois 1 gorgée.",
+    "Soirée dans la chapelle : tout le monde boit 3 gorgées.",
+    "Rosé offert : tout le monde boit 2 gorgées.",
+    "Rassemblement DT : tout le monde boit 1 gorgée."
 ]
 
 /* Evenements ? */
 let eventsSpe = [
-    "Loic est gay"
+    "T'es pas le pingouin qui glisse le plus loin : Leo désigne quelqu'un qui boit.",
+    "Anat récupère une chicha : la streetcred d'Anat augmente.",
+    "Boire pour oublier qu'on boit : Nico boit 2 gorgées.",
+    "Je m'entends super bien avec moi-même : Loic boit 2 gorgées.",
+    "C'est hayyy : Gaby boit 2 gorgées.",
+    "Une dans la moule une dans le boule : Kelvin boit 2 gorgées.",
+    "Lucien ouvre la chemise : la streetcred de Lucien augmente.",
+    "Ettore trouve une meuf avec qui danser : la streetcred d'Ettore augmente.",
+    "Anat commence la danse du chômage : la streetcred d'Anat diminue.",
+    "Thib vient de finir sa 10ème soirée : Thib boit 2 gorgées."
 ]
