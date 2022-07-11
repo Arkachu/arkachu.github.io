@@ -119,20 +119,6 @@ let nbJoueurs;
 /* Joueur actuel */
 let Joueur;
 
-/* Personnages sélectionnés par les joueurs */
-let persoJoueur1;
-let persoJoueur2;
-let persoJoueur3;
-let persoJoueur4;
-let persoJoueur5;
-let persoJoueur6;
-let persoJoueur7;
-let persoJoueur8;
-let persoJoueur9;
-let persoJoueur10;
-let persoJoueur11;
-let persoJoueur12;
-
 /* Boutons de sélection des personnages */
 let boutonAnat = document.querySelector('#boutonAnat');
 boutonAnat.hidden = true;
