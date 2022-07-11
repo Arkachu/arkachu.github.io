@@ -628,7 +628,7 @@ boutonAnat.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonAnat.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -668,7 +668,7 @@ boutonAntho.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonAntho.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -708,7 +708,7 @@ boutonMathis.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonMathis.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -748,7 +748,7 @@ boutonDoume.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonDoume.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -788,7 +788,7 @@ boutonLoic.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonLoic.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -828,7 +828,7 @@ boutonThib.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonThib.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -868,7 +868,7 @@ boutonKelvin.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonKelvin.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -908,7 +908,7 @@ boutonNico.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonNico.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -948,7 +948,7 @@ boutonLeo.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonLeo.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -988,7 +988,7 @@ boutonLucien.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonLucien.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -1028,7 +1028,7 @@ boutonGaby.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonGaby.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -1068,7 +1068,7 @@ boutonEttore.addEventListener('click', function() {
         boutonRetourJoueurs.hidden = true;   
         boutonsPrecedents[Joueur - 2].hidden = true;
         titre.textContent = 'Jeu en cours';
-        boutonLancerDes.hidden = false;
+        boutonLancerDe.hidden = false;
     } else {
         boutonEttore.disabled = true;
         boutonRetourJoueurs.hidden = true;
@@ -1186,5 +1186,75 @@ boutonRetourEttore.addEventListener('click', function() {
 });
 
 /* Bouton utilisé pour lancer les dés */
-let boutonLancerDes = document.querySelector('#boutonLancerDes');
-boutonLancerDes.hidden = true;
+let boutonLancerDe = document.querySelector('#boutonLancerDe');
+boutonLancerDe.hidden = true;
+
+/* Images de toutes les faces du dé */
+let imgDe1 = document.querySelector('#imgDe1');
+imgDe1.style.display = 'none';
+let imgDe2 = document.querySelector('#imgDe2');
+imgDe2.style.display = 'none';
+let imgDe3 = document.querySelector('#imgDe3');
+imgDe3.style.display = 'none';
+let imgDe4 = document.querySelector('#imgDe4');
+imgDe4.style.display = 'none';
+let imgDe5 = document.querySelector('#imgDe5');
+imgDe5.style.display = 'none';
+let imgDe6 = document.querySelector('#imgDe6');
+imgDe6.style.display = 'none';
+
+boutonLancerDe.addEventListener('click', function() {
+    let res = Math.round(Math.random()*5 + 1);
+    switch (res) {
+        case 1 :
+            imgDe1.style.display = 'block';
+            imgDe2.style.display = 'none';
+            imgDe3.style.display = 'none';
+            imgDe4.style.display = 'none';
+            imgDe5.style.display = 'none';
+            imgDe6.style.display = 'none';
+            break;
+        case 2 :
+            imgDe1.style.display = 'none';
+            imgDe2.style.display = 'block';
+            imgDe3.style.display = 'none';
+            imgDe4.style.display = 'none';
+            imgDe5.style.display = 'none';
+            imgDe6.style.display = 'none';
+            break;
+        case 3 :
+            imgDe1.style.display = 'none';
+            imgDe2.style.display = 'none';
+            imgDe3.style.display = 'block';
+            imgDe4.style.display = 'none';
+            imgDe5.style.display = 'none';
+            imgDe6.style.display = 'none';
+            break;
+        case 4 :
+            imgDe1.style.display = 'none';
+            imgDe2.style.display = 'none';
+            imgDe3.style.display = 'none';
+            imgDe4.style.display = 'block';
+            imgDe5.style.display = 'none';
+            imgDe6.style.display = 'none';
+            break;
+        case 5 :
+            imgDe1.style.display = 'none';
+            imgDe2.style.display = 'none';
+            imgDe3.style.display = 'none';
+            imgDe4.style.display = 'none';
+            imgDe5.style.display = 'block';
+            imgDe6.style.display = 'none';
+            break;
+        case 6 :
+            imgDe1.style.display = 'none';
+            imgDe2.style.display = 'none';
+            imgDe3.style.display = 'none';
+            imgDe4.style.display = 'none';
+            imgDe5.style.display = 'none';
+            imgDe6.style.display = 'block';
+            break;
+        default :
+            break;
+    }
+});
