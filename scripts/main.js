@@ -1205,6 +1205,7 @@ imgDe6.style.display = 'none';
 
 boutonLancerDe.addEventListener('click', function() {
     let res = Math.round(Math.random()*5 + 1);
+    let event;
     switch (res) {
         case 1 :
             imgDe1.style.display = 'block';
@@ -1213,6 +1214,8 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'none';
             imgDe5.style.display = 'none';
             imgDe6.style.display = 'none';
+            event = Math.round(Math.random()*(eventsSoiree.length - 1));
+            paragraphe1.textContent = eventsSoiree[event];
             break;
         case 2 :
             imgDe1.style.display = 'none';
@@ -1221,6 +1224,8 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'none';
             imgDe5.style.display = 'none';
             imgDe6.style.display = 'none';
+            event = Math.round(Math.random()*(eventsAix.length - 1));
+            paragraphe1.textContent = eventsAix[event];
             break;
         case 3 :
             imgDe1.style.display = 'none';
@@ -1229,6 +1234,8 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'none';
             imgDe5.style.display = 'none';
             imgDe6.style.display = 'none';
+            event = Math.round(Math.random()*(eventsPlage.length - 1));
+            paragraphe1.textContent = eventsPlage[event];
             break;
         case 4 :
             imgDe1.style.display = 'none';
@@ -1237,6 +1244,8 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'block';
             imgDe5.style.display = 'none';
             imgDe6.style.display = 'none';
+            event = Math.round(Math.random()*(eventsCamping.length - 1));
+            paragraphe1.textContent = eventsCamping[event];
             break;
         case 5 :
             imgDe1.style.display = 'none';
@@ -1245,6 +1254,8 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'none';
             imgDe5.style.display = 'block';
             imgDe6.style.display = 'none';
+            event = Math.round(Math.random()*(eventsCampanets.length - 1));
+            paragraphe1.textContent = eventsCampanets[event];
             break;
         case 6 :
             imgDe1.style.display = 'none';
@@ -1253,8 +1264,77 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe4.style.display = 'none';
             imgDe5.style.display = 'none';
             imgDe6.style.display = 'block';
+            event = Math.round(Math.random()*(eventsSpe.length - 1));
+            paragraphe1.textContent = eventsSpe[event];
             break;
         default :
             break;
     }
 });
+
+/* Evenements soirée */
+let eventsSoiree = [
+    "Antho et Nico te choppent avec un pastis : bois 2 gorgées, Antho et Nico aussi.",
+    "Vous repérez des meufs : bois 3 gorgées pour te donner du courage.",
+    "Gaby et Ettore te ramènent de soirée : la soirée est finie, finis ton verre ou fais le finir à quelqu'un (Gaby et Ettore immunisés)",
+    "Leo te ramène de soirée : la soirée est finie, finis ton verre ou fais le finir à quelqu'un (Leo immunisé)",
+    "Tu finis KO : bois 3 gorgées, Antho et Nico immunisés",
+    "Tu fumes un dragon : bois 3 gorgées, Kelvin, Leo et Ettore immunisés",
+    "Tu pars en soirée chez Nico : bois 3 gorgées.",
+    "Nico aboie sur ta cible : recule de 2 cases, Nico immunisé.",
+    "Tu pecho : bois 2 gorgées, ta streecred augmente.",
+    "Tu chiches : bois 2 gorgées, Anat, Leo et Kelvin immunisés.",
+    "Cuite au Ricard : ceux qui boivent du Ricard boivent 4 gorgées.",
+    "Cuite à la bière : ceux qui boivent de la bière boivent 4 gorgées.",
+    "Cuite à la vodka : ceux qui boivent de la vodka boivent 4 gorgées.",
+    "Cuite au rouge : ceux qui boivent du rouge boivent 4 gorgées.",
+    "Soirée entre couilles : bois 3 gorgées.",
+    "Tu te fais draguer par un gay : recule de 3 cases, Thib, Nico et Mathis immunisés.",
+    "C'est le dernier tkt : bois 4 gorgées.",
+    "La goutte de trop : bois 4 gorgées.",
+    "Nico te touche les fesses : recule d'une case, Nico, Doume et Mathis immunisés.",
+    "Coma éthylique : bois 5 gorgées.",
+    "Kelvin t'apprends à rouler : bois 2 gorgées pour t'aider à te concentrer.",
+    "Tu arrives défoncé au resto : Thib et Anat boivent.",
+    "Tu montres tes couilles en public : Nico et Antho boivent.",
+    "Ettore prends la confiance et invite des filles pour boire un verre : bois 2 gorgées pour le courage.",
+    "Antho te prends 1vs1 alcool : tu peux fuir, sinon Antho peut faire boire quelqu'un (4 gorgées).",
+    "Antho vole ta meuf : bois 3 gorgées pour oublier.",
+    "Tu désignes un Sam : Sam ne boit pas pendant 2 tours, Ettore et Gab immunisés.",
+    "Code blanc : bois 5 gorgées pour avoir oublié ton caoutchouc.",
+    "Tu testes la coc : bois 4 gorgées, Ettore et Thib immunisés.",
+    "Un gay propose de te sucer : tu bois 3 gorgées avec Nico, Mathis immunisé.",
+    "Antho baise à côté de toi : recule de 3 cases.",
+    "Anatole t'apprends à préparer une chicha : bois 2 gorgées pour apprendre plus facilement.",
+    "Lucien te fait investir dans des capotes fluorenscentes et tu deviens riche : bois 2 gorgées pour le remercier.",
+    "Leo devient ultra gênant avec ta target : ta street cred baisse, Leo immunisé.",
+    "Loic t'apprends à jouer de la guitare pour pecho de la meuf : ta street cred augmente.",
+    "Loic te bloque l'accès à la cuisine pour débat politique avec une meuf : tu ne bois pas au prochain tour, Loic immunisé.",
+    "Tu fais ta première fois : désigne une victime : Nico, Gab ou Loic qui doit boire 3 gorgées.",
+    "Antho te balance à sa place : ta street cred baisse et Antho bois 3 gorgées."
+]
+
+/* Evenements Aix */
+let eventsAix = [
+    "Pas encore fait connard"
+]
+
+/* Evenements plage */
+let eventsPlage = [
+    "Suce"
+]
+
+/* Evenements camping */
+let eventsCamping = [
+    "Avale mon chibre"
+]
+
+/* Evenements campanets */
+let eventsCampanets = [
+    "Couscous garni"
+]
+
+/* Evenements ? */
+let eventsSpe = [
+    "Loic est gay"
+]
