@@ -461,7 +461,7 @@ bouton9.addEventListener('click', function() {
 });
 
 /* Ajout d'une action au bouton10 */
-bouton12.addEventListener('click', function() {
+bouton10.addEventListener('click', function() {
     nbJoueurs = 10;
     Joueur = 1;
     titre.textContent = 'Choix des personnages : joueur 1'
@@ -592,9 +592,39 @@ boutonRetourJoueurs.addEventListener('click', function() {
 
 let joueurs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+let boutonRetourAnat = document.querySelector('#boutonRetourAnat');
+boutonRetourAnat.hidden = true;
+let boutonRetourAntho = document.querySelector('#boutonRetourAntho');
+boutonRetourAntho.hidden = true;
+let boutonRetourMathis = document.querySelector('#boutonRetourMathis');
+boutonRetourMathis.hidden = true;
+let boutonRetourDoume = document.querySelector('#boutonRetourDoume');
+boutonRetourDoume.hidden = true;
+let boutonRetourLoic = document.querySelector('#boutonRetourLoic');
+boutonRetourLoic.hidden = true;
+let boutonRetourThib = document.querySelector('#boutonRetourThib');
+boutonRetourThib.hidden = true;
+let boutonRetourKelvin = document.querySelector('#boutonRetourKelvin');
+boutonRetourKelvin.hidden = true;
+let boutonRetourNico = document.querySelector('#boutonRetourNico');
+boutonRetourNico.hidden = true;
+let boutonRetourLeo = document.querySelector('#boutonRetourLeo');
+boutonRetourLeo.hidden = true;
+let boutonRetourLucien = document.querySelector('#boutonRetourLucien');
+boutonRetourLucien.hidden = true;
+let boutonRetourGaby = document.querySelector('#boutonRetourGaby');
+boutonRetourGaby.hidden = true;
+let boutonRetourEttore = document.querySelector('#boutonRetourEttore');
+boutonRetourEttore.hidden = true;
+
+/* Permet d'enregistrer les boutons de retour */
+let boutonsPrecedents = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+boutonsPrecedents[0] = boutonRetourJoueurs;
+
 /* Ajout des évènements aux boutons de sélection des personnages */
 boutonAnat.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Anat';
+    boutonsPrecedents[Joueur] = boutonRetourAnat;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -610,14 +640,31 @@ boutonAnat.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonAnat.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = false;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonAntho.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Antho';
+    boutonsPrecedents[Joueur] = boutonRetourAntho;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -633,14 +680,31 @@ boutonAntho.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonAntho.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = false;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonMathis.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Mathis';
+    boutonsPrecedents[Joueur] = boutonRetourMathis;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -656,14 +720,31 @@ boutonMathis.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonMathis.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = false;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonDoume.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Doume';
+    boutonsPrecedents[Joueur] = boutonRetourDoume;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -679,14 +760,31 @@ boutonDoume.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonDoume.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = false;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonLoic.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Loic';
+    boutonsPrecedents[Joueur] = boutonRetourLoic;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -702,14 +800,31 @@ boutonLoic.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonLoic.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = false;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonThib.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Thib';
+    boutonsPrecedents[Joueur] = boutonRetourThib;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -725,14 +840,31 @@ boutonThib.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonThib.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = false;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonKelvin.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Kelvin';
+    boutonsPrecedents[Joueur] = boutonRetourKelvin;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -748,14 +880,31 @@ boutonKelvin.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonKelvin.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = false;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonNico.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Nico';
+    boutonsPrecedents[Joueur] = boutonRetourNico;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -771,14 +920,31 @@ boutonNico.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonNico.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = false;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonLeo.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Leo';
+    boutonsPrecedents[Joueur] = boutonRetourLeo;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -794,14 +960,31 @@ boutonLeo.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonLeo.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = false;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonLucien.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Lucien';
+    boutonsPrecedents[Joueur] = boutonRetourLucien;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -817,14 +1000,31 @@ boutonLucien.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonLucien.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = false;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonGaby.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Gaby';
+    boutonsPrecedents[Joueur] = boutonRetourGaby;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -840,14 +1040,31 @@ boutonGaby.addEventListener('click', function() {
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonGaby.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = false;
+        boutonRetourEttore.hidden = true;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
 
 boutonEttore.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Ettore';
+    boutonsPrecedents[Joueur] = boutonRetourEttore;
     Joueur++;
     if (Joueur === nbJoueurs + 1) {
         boutonAnat.hidden = true;
@@ -862,9 +1079,126 @@ boutonEttore.addEventListener('click', function() {
         boutonLucien.hidden = true;
         boutonGaby.hidden = true;
         boutonEttore.hidden = true;
-        boutonRetourJoueurs.hidden = true;
-        titre.textContent = 'Jeu en cours'
+        boutonRetourJoueurs.hidden = true;   
+        boutonsPrecedents[Joueur - 2].hidden = true;
+        titre.textContent = 'Jeu en cours';
+        boutonLancerDes.hidden = false;
     } else {
         boutonEttore.disabled = true;
+        boutonRetourJoueurs.hidden = true;
+        boutonRetourAnat.hidden = true;
+        boutonRetourAntho.hidden = true;
+        boutonRetourMathis.hidden = true;
+        boutonRetourDoume.hidden = true;
+        boutonRetourLoic.hidden = true;
+        boutonRetourThib.hidden = true;
+        boutonRetourKelvin.hidden = true;
+        boutonRetourNico.hidden = true;
+        boutonRetourLeo.hidden = true;
+        boutonRetourLucien.hidden = true;
+        boutonRetourGaby.hidden = true;
+        boutonRetourEttore.hidden = false;
+        titre.textContent = "Choix des personnages : joueur " + Joueur;
     }
 });
+
+/* Ajout des actions sur les boutons de retour pendant la sélection des personnages */
+boutonRetourAnat.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonAnat.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourAnat.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourAntho.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonAntho.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourAntho.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourMathis.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonMathis.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourMathis.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourDoume.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonDoume.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourDoume.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourLoic.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonLoic.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourLoic.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourThib.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonThib.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourThib.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourKelvin.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonKelvin.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourKelvin.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourNico.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonNico.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourNico.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourLeo.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonLeo.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourLeo.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourLucien.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonLucien.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourLucien.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourGaby.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonGaby.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourGaby.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+boutonRetourEttore.addEventListener('click', function() {
+    Joueur = Joueur - 1;
+    boutonEttore.disabled = false;
+    boutonsPrecedents[Joueur - 1].hidden = false;
+    boutonRetourEttore.hidden = true;
+    titre.textContent = "Choix des personnages : joueur " + Joueur;
+});
+
+/* Bouton utilisé pour lancer les dés */
+let boutonLancerDes = document.querySelector('#boutonLancerDes');
+boutonLancerDes.hidden = true;
