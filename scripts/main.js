@@ -607,6 +607,10 @@ boutonRetourEttore.hidden = true;
 let boutonsPrecedents = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 boutonsPrecedents[0] = boutonRetourJoueurs;
 
+/* Image grise pour ne pas décaler lors du premier lancer de dé */
+let imgGris = document.querySelector('#imgGris');
+imgGris.style.display = 'none';
+
 /* Ajout des évènements aux boutons de sélection des personnages */
 boutonAnat.addEventListener('click', function() {
     joueurs[Joueur - 1] = 'Anat';
@@ -627,7 +631,9 @@ boutonAnat.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonAnat.disabled = true;
@@ -667,7 +673,9 @@ boutonAntho.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonAntho.disabled = true;
@@ -707,7 +715,9 @@ boutonMathis.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonMathis.disabled = true;
@@ -747,7 +757,9 @@ boutonDoume.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonDoume.disabled = true;
@@ -787,7 +799,9 @@ boutonLoic.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonLoic.disabled = true;
@@ -827,7 +841,9 @@ boutonThib.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonThib.disabled = true;
@@ -867,7 +883,9 @@ boutonKelvin.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonKelvin.disabled = true;
@@ -907,7 +925,9 @@ boutonNico.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonNico.disabled = true;
@@ -947,7 +967,9 @@ boutonLeo.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonLeo.disabled = true;
@@ -987,7 +1009,9 @@ boutonLucien.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonLucien.disabled = true;
@@ -1027,7 +1051,9 @@ boutonGaby.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
         boutonLancerDe.hidden = false;
     } else {
         boutonGaby.disabled = true;
@@ -1067,7 +1093,10 @@ boutonEttore.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;   
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours';
+        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
+        paragraphe1.textContent = "Le jeu commence !"
+        imgGris.style.display = 'block';
+        img
         boutonLancerDe.hidden = false;
     } else {
         boutonEttore.disabled = true;
@@ -1203,7 +1232,14 @@ imgDe5.style.display = 'none';
 let imgDe6 = document.querySelector('#imgDe6');
 imgDe6.style.display = 'none';
 
+/* Compteur pour gérer les tours */
+let compteur = 0;
+
+/* Tableau gérant les tours passés par les joueurs */
+let passe_tour = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 boutonLancerDe.addEventListener('click', function() {
+    imgGris.style.display = 'none';
     let res = Math.round(Math.random()*5 + 1);
     let event;
     switch (res) {
@@ -1226,6 +1262,25 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe6.style.display = 'none';
             event = Math.round(Math.random()*(eventsAix.length - 1));
             paragraphe1.textContent = eventsAix[event];
+            switch (event) {
+                case 5 :
+                    passe_tour[compteur] = 1;
+                    break;
+                case 12 :
+                    passe_tour[compteur] = 1;
+                    break;
+                    case 18 :
+                    passe_tour[compteur] = 1;
+                    break;
+                case 22 :
+                    passe_tour[compteur] = 1;
+                    break;
+                case 26 :
+                    passe_tour[compteur] = 1;
+                    break;
+                default :
+                    break;
+            }
             break;
         case 3 :
             imgDe1.style.display = 'none';
@@ -1270,6 +1325,26 @@ boutonLancerDe.addEventListener('click', function() {
         default :
             break;
     }
+
+    /* Joueur suivant */
+    compteur++;
+
+    /* Si le dernier joueur à déjà joué, c'est au tour du premier joueur de jouer */
+    if (compteur === nbJoueurs) {
+        compteur = 0;
+    }
+
+    /* Gestion du premier joueur à qui c'est le tour (qui ne passe pas son tour) */
+    while (passe_tour[compteur] === 1) {
+        passe_tour[compteur] = 0;
+        compteur++;
+        if (compteur === nbJoueurs) {
+            compteur = 0;
+        }
+    }
+
+    /* Annonce du tour du joueur */
+    titre.textContent = "Jeu en cours : au tour de " + joueurs[compteur];
 });
 
 /* Evenements soirée */
@@ -1281,7 +1356,7 @@ let eventsSoiree = [
     "Tu finis KO : bois 3 gorgées, Antho et Nico immunisés",
     "Tu fumes un dragon : bois 3 gorgées, Kelvin, Leo et Ettore immunisés",
     "Tu pars en soirée chez Nico : bois 3 gorgées.",
-    "Nico aboie sur ta cible : recule de 2 cases, Nico immunisé.",
+    "Nico aboie sur ta cible : ta streetcred diminue, Nico immunisé.",
     "Tu pecho : bois 2 gorgées, ta streecred augmente.",
     "Tu chiches : bois 2 gorgées, Anat, Leo et Kelvin immunisés.",
     "Cuite au Ricard : ceux qui boivent du Ricard boivent 4 gorgées.",
@@ -1289,10 +1364,10 @@ let eventsSoiree = [
     "Cuite à la vodka : ceux qui boivent de la vodka boivent 4 gorgées.",
     "Cuite au rouge : ceux qui boivent du rouge boivent 4 gorgées.",
     "Soirée entre couilles : bois 3 gorgées.",
-    "Tu te fais draguer par un gay : recule de 3 cases, Thib, Nico et Mathis immunisés.",
+    "Tu te fais draguer par un gay : bois 3 gorgées, Thib, Nico et Mathis immunisés.",
     "C'est le dernier tkt : bois 4 gorgées.",
     "La goutte de trop : bois 4 gorgées.",
-    "Nico te touche les fesses : recule d'une case, Nico, Doume et Mathis immunisés.",
+    "Nico te touche les fesses : bois 2 gorgées, Nico, Doume et Mathis immunisés.",
     "Coma éthylique : bois 5 gorgées.",
     "Kelvin t'apprends à rouler : bois 2 gorgées pour t'aider à te concentrer.",
     "Tu arrives défoncé au resto : Thib et Anat boivent.",
@@ -1304,7 +1379,7 @@ let eventsSoiree = [
     "Code blanc : bois 5 gorgées pour avoir oublié ton caoutchouc.",
     "Tu testes la coc : bois 4 gorgées, Ettore et Thib immunisés.",
     "Un gay propose de te sucer : tu bois 3 gorgées avec Nico, Mathis immunisé.",
-    "Antho baise à côté de toi : recule de 3 cases.",
+    "Antho baise à côté de toi : bois 2 gorgées.",
     "Anatole t'apprends à préparer une chicha : bois 2 gorgées pour apprendre plus facilement.",
     "Lucien te fait investir dans des capotes fluorenscentes et tu deviens riche : bois 2 gorgées pour le remercier.",
     "Leo devient ultra gênant avec ta target : ta street cred baisse, Leo immunisé.",
@@ -1334,7 +1409,7 @@ let eventsAix = [
     "Tu te fais courser par les flics : bois 3 gorgées apres leur avoir échappé ou va au commissariat, Gaby et Ettore immunisés.",
     "Anat te ramene de soirée (tu fais un détour au commissariat) : retourne au commissariat.",
     "Thib vomit dans les toilettes : tu l'abandonnes ou tu bois 1 gorgée.",
-    "Tu te fais recaler : recule de 3 cases.",
+    "Tu te fais recaler : passe le prochain tour.",
     "Doume réussit à chopper avec toi le num de sa voisine : bois 2 gorgées avec Doume pour fêter ça.",
     "Tu fais la tournée du capitaine : ta street cred augmente, bois 5 gorgées et ne bois pas au prochain tour.",
     "Début d'une course au feu de bellegarde : défie quelqu'un et finissez votre verre le plus vite possible.",
