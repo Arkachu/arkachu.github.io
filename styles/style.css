@@ -12,12 +12,20 @@ h1 {
     text-shadow: 3px 3px 1px black;
 }
 
-p, li {
+p {
     font-size: 125%;
     line-height: 1.5;
     letter-spacing: 1px;
     color: black;
     text-align: center;
+}
+
+li {
+    font-size: 125%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: black;
+    margin-left: 1515px;
 }
 
 img {
