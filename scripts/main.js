@@ -1264,16 +1264,22 @@ boutonLancerDe.addEventListener('click', function() {
             paragraphe1.textContent = eventsAix[event];
             switch (event) {
                 case 5 :
-                    passe_tour[compteur] = 1;
+                    if (joueurs[compteur] !== "Loic") {
+                        passe_tour[compteur] = 1;
+                    }
                     break;
                 case 12 :
-                    passe_tour[compteur] = 1;
+                    if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                        passe_tour[compteur] = 1;
+                    }
                     break;
                     case 18 :
                     passe_tour[compteur] = 1;
                     break;
                 case 22 :
-                    passe_tour[compteur] = 1;
+                    if (joueurs[compteur] !== "Leo") {
+                        passe_tour[compteur] = 1;
+                    }
                     break;
                 case 26 :
                     passe_tour[compteur] = 1;
