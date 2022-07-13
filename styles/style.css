@@ -1,7 +1,7 @@
 html {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-    background-color: lightgrey;
+    background-color: white;
 }
 
 h1 {
@@ -16,17 +16,24 @@ p, li {
     font-size: 125%;
     line-height: 1.5;
     letter-spacing: 1px;
-}
-
-a:hover {
-    color: red;
+    color: black;
+    text-align: center;
 }
 
 img {
     display: block;
     margin: 0 auto;
-    height: 5%;
-    width: 5%;
+    height: 100px;
+    width: 100px;
+    margin-top: 1143px;
+}
+
+body {
+    background-image: url('images/camping.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 200px;
+    height: 1300px;
 }
 
 button {
@@ -34,5 +41,6 @@ button {
     height: 1cm;
     margin-left: 40%;
     margin-right: 40%;
+    margin-top: 10px;
     font-size: 125%;
 }

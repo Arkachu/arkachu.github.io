@@ -634,6 +634,47 @@ boutonAnat.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
         boutonLancerDe.hidden = false;
     } else {
         boutonAnat.disabled = true;
@@ -676,6 +717,48 @@ boutonAntho.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonAntho.disabled = true;
@@ -718,6 +801,48 @@ boutonMathis.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonMathis.disabled = true;
@@ -760,6 +885,48 @@ boutonDoume.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonDoume.disabled = true;
@@ -802,6 +969,48 @@ boutonLoic.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonLoic.disabled = true;
@@ -844,6 +1053,48 @@ boutonThib.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonThib.disabled = true;
@@ -886,6 +1137,48 @@ boutonKelvin.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonKelvin.disabled = true;
@@ -928,6 +1221,48 @@ boutonNico.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonNico.disabled = true;
@@ -970,6 +1305,48 @@ boutonLeo.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonLeo.disabled = true;
@@ -1012,6 +1389,48 @@ boutonLucien.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonLucien.disabled = true;
@@ -1054,6 +1473,48 @@ boutonGaby.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonGaby.disabled = true;
@@ -1096,7 +1557,48 @@ boutonEttore.addEventListener('click', function() {
         titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
         paragraphe1.textContent = "Le jeu commence !"
         imgGris.style.display = 'block';
-        img
+        imgGris.style.visibility = 'hidden';
+        
+        switch (joueurs[0]) {
+            case 'Anat' :
+                document.body.style.backgroundImage = "url('images/anat.jpg')";
+                break;
+            case 'Antho' :
+                document.body.style.backgroundImage = "url('images/antho.jpg')";
+                break;
+            case 'Doume' :
+                document.body.style.backgroundImage = "url('images/doume.jpg')";
+                break;
+            case 'Loic' :
+                document.body.style.backgroundImage = "url('images/loic.jpg')";
+                break;
+            case 'Thib' :
+                document.body.style.backgroundImage = "url('images/thib.jpg')";
+                break;
+            case 'Nico' :
+                document.body.style.backgroundImage = "url('images/nico.jpg')";
+                break;
+            case 'Kelvin' :
+                document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+                break;
+            case 'Leo' :
+                document.body.style.backgroundImage = "url('images/leo.jpg')";
+                break;
+            case 'Lucien' :
+                document.body.style.backgroundImage = "url('images/lucien.jpg')";
+                break;
+            case 'Mathis' :
+                document.body.style.backgroundImage = "url('images/mathis.jpg')";
+                break;
+            case 'Gaby' :
+                document.body.style.backgroundImage = "url('images/gaby.jpg')";
+                break;
+            case 'Ettore' :
+                document.body.style.backgroundImage = "url('images/ettore.jpg')";
+                break;
+        }
+
+        
         boutonLancerDe.hidden = false;
     } else {
         boutonEttore.disabled = true;
@@ -1351,6 +1853,46 @@ boutonLancerDe.addEventListener('click', function() {
 
     /* Annonce du tour du joueur */
     titre.textContent = "Jeu en cours : au tour de " + joueurs[compteur];
+
+    /* Changement du background */
+    switch (joueurs[compteur]) {
+        case 'Anat' :
+            document.body.style.backgroundImage = "url('images/anat.jpg')";
+            break;
+        case 'Antho' :
+            document.body.style.backgroundImage = "url('images/antho.jpg')";
+            break;
+        case 'Doume' :
+            document.body.style.backgroundImage = "url('images/doume.jpg')";
+            break;
+        case 'Loic' :
+            document.body.style.backgroundImage = "url('images/loic.jpg')";
+            break;
+        case 'Thib' :
+            document.body.style.backgroundImage = "url('images/thib.jpg')";
+            break;
+        case 'Nico' :
+            document.body.style.backgroundImage = "url('images/nico.jpg')";
+            break;
+        case 'Kelvin' :
+            document.body.style.backgroundImage = "url('images/kelvin.jpg')";
+            break;
+        case 'Leo' :
+            document.body.style.backgroundImage = "url('images/leo.jpg')";
+            break;
+        case 'Lucien' :
+            document.body.style.backgroundImage = "url('images/lucien.jpg')";
+            break;
+        case 'Mathis' :
+            document.body.style.backgroundImage = "url('images/mathis.jpg')";
+            break;
+        case 'Gaby' :
+            document.body.style.backgroundImage = "url('images/gaby.jpg')";
+            break;
+        case 'Ettore' :
+            document.body.style.backgroundImage = "url('images/ettore.jpg')";
+            break;
+    }
 });
 
 /* Evenements soirée */
