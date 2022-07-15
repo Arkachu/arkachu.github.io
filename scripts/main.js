@@ -631,10 +631,7 @@ boutonAnat.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -675,6 +672,98 @@ boutonAnat.addEventListener('click', function() {
                 break;
         }
 
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonAnat.disabled = true;
@@ -714,10 +803,7 @@ boutonAntho.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -758,7 +844,98 @@ boutonAntho.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonAntho.disabled = true;
@@ -798,10 +975,7 @@ boutonMathis.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -842,7 +1016,98 @@ boutonMathis.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonMathis.disabled = true;
@@ -882,10 +1147,7 @@ boutonDoume.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -926,7 +1188,98 @@ boutonDoume.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonDoume.disabled = true;
@@ -966,10 +1319,7 @@ boutonLoic.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1010,7 +1360,98 @@ boutonLoic.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonLoic.disabled = true;
@@ -1050,10 +1491,7 @@ boutonThib.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1094,7 +1532,98 @@ boutonThib.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonThib.disabled = true;
@@ -1134,10 +1663,7 @@ boutonKelvin.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1178,7 +1704,98 @@ boutonKelvin.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonKelvin.disabled = true;
@@ -1218,10 +1835,7 @@ boutonNico.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1262,7 +1876,98 @@ boutonNico.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonNico.disabled = true;
@@ -1302,10 +2007,7 @@ boutonLeo.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1346,7 +2048,98 @@ boutonLeo.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonLeo.disabled = true;
@@ -1386,10 +2179,7 @@ boutonLucien.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1430,7 +2220,98 @@ boutonLucien.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonLucien.disabled = true;
@@ -1470,10 +2351,7 @@ boutonGaby.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1513,8 +2391,99 @@ boutonGaby.addEventListener('click', function() {
                 document.body.style.backgroundImage = "url('images/ettore.jpg')";
                 break;
         }
-
         
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonGaby.disabled = true;
@@ -1554,10 +2523,7 @@ boutonEttore.addEventListener('click', function() {
         boutonEttore.hidden = true;
         boutonRetourJoueurs.hidden = true;   
         boutonsPrecedents[Joueur - 2].hidden = true;
-        titre.textContent = 'Jeu en cours : au tour de ' + joueurs[0];
-        paragraphe1.textContent = "Le jeu commence !"
-        imgGris.style.display = 'block';
-        imgGris.style.visibility = 'hidden';
+        titre.textContent = 'Jeu en cours : tour de ' + joueurs[0];
         
         switch (joueurs[0]) {
             case 'Anat' :
@@ -1598,7 +2564,98 @@ boutonEttore.addEventListener('click', function() {
                 break;
         }
 
-        
+        let res = Math.round(Math.random()*5 + 1);
+        let event;
+        switch (res) {
+            case 1 :
+                imgDe1.style.display = 'block';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsSoiree.length - 1));
+                paragraphe1.textContent = eventsSoiree[event];
+                break;
+            case 2 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'block';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsAix.length - 1));
+                paragraphe1.textContent = eventsAix[event];
+                switch (event) {
+                    case 5 :
+                        if (joueurs[compteur] !== "Loic") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 12 :
+                        if (joueurs[compteur] !== "Leo" && joueurs[compteur] !== "Gaby" && joueurs[compteur] !== "Ettore" && joueurs[compteur] !== "Kelvin") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                        case 18 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    case 22 :
+                        if (joueurs[compteur] !== "Leo") {
+                            passe_tour[compteur] = 1;
+                        }
+                        break;
+                    case 26 :
+                        passe_tour[compteur] = 1;
+                        break;
+                    default :
+                        break;
+                }
+                break;
+            case 3 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'block';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsPlage.length - 1));
+                paragraphe1.textContent = eventsPlage[event];
+                break;
+            case 4 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'block';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCamping.length - 1));
+                paragraphe1.textContent = eventsCamping[event];
+                break;
+            case 5 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'block';
+                imgDe6.style.display = 'none';
+                event = Math.round(Math.random()*(eventsCampanets.length - 1));
+                paragraphe1.textContent = eventsCampanets[event];
+                break;
+            case 6 :
+                imgDe1.style.display = 'none';
+                imgDe2.style.display = 'none';
+                imgDe3.style.display = 'none';
+                imgDe4.style.display = 'none';
+                imgDe5.style.display = 'none';
+                imgDe6.style.display = 'block';
+                event = Math.round(Math.random()*(eventsSpe.length - 1));
+                paragraphe1.textContent = eventsSpe[event];
+                break;
+            default :
+                break;
+        }
+        tableau.hidden = false;
         boutonLancerDe.hidden = false;
     } else {
         boutonEttore.disabled = true;
@@ -1852,7 +2909,7 @@ boutonLancerDe.addEventListener('click', function() {
     }
 
     /* Annonce du tour du joueur */
-    titre.textContent = "Jeu en cours : au tour de " + joueurs[compteur];
+    titre.textContent = "Jeu en cours : tour de " + joueurs[compteur];
 
     /* Changement du background */
     switch (joueurs[compteur]) {
@@ -2029,3 +3086,23 @@ let eventsSpe = [
     "Anat commence la danse du chômage : la streetcred d'Anat diminue.",
     "Thib vient de finir sa 10ème soirée : Thib boit 2 gorgées."
 ]
+
+/* Gestion de la streetcred */
+
+/* Tableau qui affiche la streetcred */
+let tableau = document.querySelector('#tableau');
+tableau.hidden = true;
+
+/* Streecred des personnages */
+let SCAnat = document.querySelector('#SCAnat');
+let SCAntho = document.querySelector('#SCAntho');
+let SCMathis = document.querySelector('#SCMathis');
+let SCDoume = document.querySelector('#SCDoume');
+let SCLoic = document.querySelector('#SCLoic');
+let SCThib = document.querySelector('#SCThib');
+let SCKelvin = document.querySelector('#SCKelvin');
+let SCNico = document.querySelector('#SCNico');
+let SCLeo = document.querySelector('#SCLeo');
+let SCLucien = document.querySelector('#SCLucien');
+let SCGaby = document.querySelector('#SCGaby');
+let SCEttore = document.querySelector('#SCEttore');
