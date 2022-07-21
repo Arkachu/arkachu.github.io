@@ -34,14 +34,14 @@ img {
     margin: 0 auto;
     height: 100px;
     width: 100px;
-    margin-top: 1038px;
+    margin-top: 1020px;
 }
 
 body {
     background-image: url('images/camping.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 300px;
+    background-position-y: 350px;
     height: 1300px;
 }
 
