@@ -607,12 +607,83 @@ boutonRetourEttore.hidden = true;
 let boutonsPrecedents = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 boutonsPrecedents[0] = boutonRetourJoueurs;
 
-/* Image grise pour ne pas décaler lors du premier lancer de dé */
-let imgGris = document.querySelector('#imgGris');
-imgGris.style.display = 'none';
+/* Tableau de la streetcred */
+let tableau = document.querySelector('#tableau');
+tableau.hidden = true;
+
+/* Lignes affichant les noms des personnages et leur streetcred */
+let lignePerso = document.querySelector('#lignePerso');
+let ligneSC = document.querySelector('#ligneSC');
+
+/* Cellules contenant les noms des personnages ainsi que leur streetcred */
+const cellAnat = document.createElement('td');
+cellAnat.innerHTML = 'Anat';
+let SCAnat = document.createElement('td');
+SCAnat.innerHTML = 0;
+
+const cellAntho = document.createElement('td');
+cellAntho.innerHTML = 'Antho';
+let SCAntho = document.createElement('td');
+SCAntho.innerHTML = 0;
+
+const cellMathis = document.createElement('td');
+cellMathis.innerHTML = 'Mathis';
+let SCMathis = document.createElement('td');
+SCMathis.innerHTML = 0;
+
+const cellDoume = document.createElement('td');
+cellDoume.innerHTML = 'Doume';
+let SCDoume = document.createElement('td');
+SCDoume.innerHTML = 0;
+
+const cellLoic = document.createElement('td');
+cellLoic.innerHTML = 'Loic';
+let SCLoic = document.createElement('td');
+SCLoic.innerHTML = 0;
+
+const cellThib = document.createElement('td');
+cellThib.innerHTML = 'Thib';
+let SCThib = document.createElement('td');
+SCThib.innerHTML = 0;
+
+const cellKelvin = document.createElement('td');
+cellKelvin.innerHTML = 'Kelvin';
+let SCKelvin = document.createElement('td');
+SCKelvin.innerHTML = 0;
+
+const cellNico = document.createElement('td');
+cellNico.innerHTML = 'Nico';
+let SCNico = document.createElement('td');
+SCNico.innerHTML = 0;
+
+const cellLeo = document.createElement('td');
+cellLeo.innerHTML = 'Leo';
+let SCLeo = document.createElement('td');
+SCLeo.innerHTML = 0;
+
+const cellLucien = document.createElement('td');
+cellLucien.innerHTML = 'Lucien';
+let SCLucien = document.createElement('td');
+SCLucien.innerHTML = 0;
+
+const cellGaby = document.createElement('td');
+cellGaby.innerHTML = 'Gaby';
+let SCGaby = document.createElement('td');
+SCGaby.innerHTML = 0;
+
+const cellEttore = document.createElement('td');
+cellEttore.innerHTML = 'Ettore';
+let SCEttore = document.createElement('td');
+SCEttore.innerHTML = 0;
 
 /* Ajout des évènements aux boutons de sélection des personnages */
 boutonAnat.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom d'Anat au tableau de la streetcred */
+    lignePerso.appendChild(cellAnat);
+
+    /* Ajout de la ligne de la streetcred d'Anat au tableau */
+    ligneSC.appendChild(SCAnat);
+
     joueurs[Joueur - 1] = 'Anat';
     boutonsPrecedents[Joueur] = boutonRetourAnat;
     Joueur++;
@@ -684,7 +755,7 @@ boutonAnat.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -725,48 +796,7 @@ boutonAnat.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -808,7 +838,90 @@ boutonAnat.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -1458,6 +1571,12 @@ boutonAnat.addEventListener('click', function() {
 });
 
 boutonAntho.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom d'Antho au tableau de la streetcred */
+    lignePerso.appendChild(cellAntho);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCAntho);
+
     joueurs[Joueur - 1] = 'Antho';
     boutonsPrecedents[Joueur] = boutonRetourAntho;
     Joueur++;
@@ -1529,7 +1648,7 @@ boutonAntho.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -1570,7 +1689,7 @@ boutonAntho.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
+                    case 33 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -1611,7 +1730,7 @@ boutonAntho.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 33 :
+                    case 34 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -1653,7 +1772,7 @@ boutonAntho.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -2303,6 +2422,12 @@ boutonAntho.addEventListener('click', function() {
 });
 
 boutonMathis.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Mathis au tableau de la streetcred */
+    lignePerso.appendChild(cellMathis);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCMathis);
+
     joueurs[Joueur - 1] = 'Mathis';
     boutonsPrecedents[Joueur] = boutonRetourMathis;
     Joueur++;
@@ -2374,7 +2499,7 @@ boutonMathis.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -2415,48 +2540,7 @@ boutonMathis.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -2498,7 +2582,90 @@ boutonMathis.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -3148,6 +3315,12 @@ boutonMathis.addEventListener('click', function() {
 });
 
 boutonDoume.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Doume au tableau de la streetcred */
+    lignePerso.appendChild(cellDoume);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCDoume);
+
     joueurs[Joueur - 1] = 'Doume';
     boutonsPrecedents[Joueur] = boutonRetourDoume;
     Joueur++;
@@ -3219,7 +3392,7 @@ boutonDoume.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -3260,48 +3433,7 @@ boutonDoume.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -3343,7 +3475,90 @@ boutonDoume.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -3993,6 +4208,12 @@ boutonDoume.addEventListener('click', function() {
 });
 
 boutonLoic.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Loic au tableau de la streetcred */
+    lignePerso.appendChild(cellLoic);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCLoic);
+
     joueurs[Joueur - 1] = 'Loic';
     boutonsPrecedents[Joueur] = boutonRetourLoic;
     Joueur++;
@@ -4064,7 +4285,7 @@ boutonLoic.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -4105,48 +4326,7 @@ boutonLoic.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -4188,7 +4368,90 @@ boutonLoic.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -4838,6 +5101,12 @@ boutonLoic.addEventListener('click', function() {
 });
 
 boutonThib.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Thib au tableau de la streetcred */
+    lignePerso.appendChild(cellThib);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCThib);
+
     joueurs[Joueur - 1] = 'Thib';
     boutonsPrecedents[Joueur] = boutonRetourThib;
     Joueur++;
@@ -4909,7 +5178,7 @@ boutonThib.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -4950,48 +5219,7 @@ boutonThib.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -5033,7 +5261,90 @@ boutonThib.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -5683,6 +5994,12 @@ boutonThib.addEventListener('click', function() {
 });
 
 boutonKelvin.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Kelvin au tableau de la streetcred */
+    lignePerso.appendChild(cellKelvin);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCKelvin);
+
     joueurs[Joueur - 1] = 'Kelvin';
     boutonsPrecedents[Joueur] = boutonRetourKelvin;
     Joueur++;
@@ -5754,7 +6071,7 @@ boutonKelvin.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -5795,48 +6112,7 @@ boutonKelvin.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -5878,7 +6154,90 @@ boutonKelvin.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -6528,6 +6887,12 @@ boutonKelvin.addEventListener('click', function() {
 });
 
 boutonNico.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Nico au tableau de la streetcred */
+    lignePerso.appendChild(cellNico);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCNico);
+
     joueurs[Joueur - 1] = 'Nico';
     boutonsPrecedents[Joueur] = boutonRetourNico;
     Joueur++;
@@ -6599,7 +6964,7 @@ boutonNico.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -6640,48 +7005,7 @@ boutonNico.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -6723,7 +7047,90 @@ boutonNico.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -7373,6 +7780,12 @@ boutonNico.addEventListener('click', function() {
 });
 
 boutonLeo.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Leo au tableau de la streetcred */
+    lignePerso.appendChild(cellLeo);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCLeo);
+
     joueurs[Joueur - 1] = 'Leo';
     boutonsPrecedents[Joueur] = boutonRetourLeo;
     Joueur++;
@@ -7444,7 +7857,7 @@ boutonLeo.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -7485,48 +7898,7 @@ boutonLeo.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -7568,7 +7940,90 @@ boutonLeo.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -8218,6 +8673,12 @@ boutonLeo.addEventListener('click', function() {
 });
 
 boutonLucien.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Lucien au tableau de la streetcred */
+    lignePerso.appendChild(cellLucien);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCLucien);
+
     joueurs[Joueur - 1] = 'Lucien';
     boutonsPrecedents[Joueur] = boutonRetourLucien;
     Joueur++;
@@ -8289,7 +8750,7 @@ boutonLucien.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -8330,48 +8791,7 @@ boutonLucien.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -8413,7 +8833,90 @@ boutonLucien.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -9063,6 +9566,12 @@ boutonLucien.addEventListener('click', function() {
 });
 
 boutonGaby.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom de Gaby au tableau de la streetcred */
+    lignePerso.appendChild(cellGaby);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCGaby);
+
     joueurs[Joueur - 1] = 'Gaby';
     boutonsPrecedents[Joueur] = boutonRetourGaby;
     Joueur++;
@@ -9134,7 +9643,7 @@ boutonGaby.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -9175,48 +9684,7 @@ boutonGaby.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -9258,7 +9726,90 @@ boutonGaby.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -9908,6 +10459,12 @@ boutonGaby.addEventListener('click', function() {
 });
 
 boutonEttore.addEventListener('click', function() {
+    /* Ajout de la cellule avec le nom d'Ettore au tableau de la streetcred */
+    lignePerso.appendChild(cellEttore);
+
+    /* Ajout de la ligne de la streetcred d'Antho au tableau */
+    ligneSC.appendChild(SCEttore);
+
     joueurs[Joueur - 1] = 'Ettore';
     boutonsPrecedents[Joueur] = boutonRetourEttore;
     Joueur++;
@@ -9979,7 +10536,7 @@ boutonEttore.addEventListener('click', function() {
                 imgDe6.style.display = 'none';
                 event = Math.round(Math.random()*(eventsSoiree.length - 1));
                 switch (event) {
-                    case 6 :
+                    case 7 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -10020,48 +10577,7 @@ boutonEttore.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 32 :
-                        switch (joueurs[0]) {
-                            case 'Anat' :
-                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
-                                break;
-                            case 'Antho' :
-                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
-                                break;
-                            case 'Doume' :
-                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Loic' :
-                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
-                                break;
-                            case 'Mathis' :
-                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
-                                break;
-                            case 'Nico' :
-                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
-                                break;
-                            case 'Leo' :
-                                break;
-                            case 'Gaby' :
-                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
-                                break;
-                            case 'Lucien' :
-                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
-                                break;
-                            case 'Ettore' :
-                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
-                                break;
-                            case 'Kelvin' :
-                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
-                                break;
-                            default :
-                                break;
-                        }
-                        break;
-                    case 33 :
+                    case 8 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
@@ -10103,7 +10619,90 @@ boutonEttore.addEventListener('click', function() {
                                 break;
                         }
                         break;
-                    case 36 :
+                    case 33 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) - 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) - 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) - 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) - 1;
+                                break;
+                            case 'Leo' :
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) - 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) - 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) - 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 34 :
+                        switch (joueurs[0]) {
+                            case 'Anat' :
+                                SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                                break;
+                            case 'Antho' :
+                                SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                                break;
+                            case 'Doume' :
+                                SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Loic' :
+                                SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                                break;
+                            case 'Mathis' :
+                                SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                                break;
+                            case 'Nico' :
+                                SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                                break;
+                            case 'Leo' :
+                                SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                                break;
+                            case 'Gaby' :
+                                SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                                break;
+                            case 'Lucien' :
+                                SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                                break;
+                            case 'Ettore' :
+                                SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                                break;
+                            case 'Kelvin' :
+                                SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
+                                break;
+                            default :
+                                break;
+                        }
+                        break;
+                    case 37 :
                         switch (joueurs[0]) {
                             case 'Anat' :
                                 SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -10873,22 +11472,7 @@ let compteur = 0;
 /* Tableau gérant les tours passés par les joueurs */
 let passe_tour = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-/* Streecred des personnages */
-let SCAnat = document.querySelector('#SCAnat');
-let SCAntho = document.querySelector('#SCAntho');
-let SCMathis = document.querySelector('#SCMathis');
-let SCDoume = document.querySelector('#SCDoume');
-let SCLoic = document.querySelector('#SCLoic');
-let SCThib = document.querySelector('#SCThib');
-let SCKelvin = document.querySelector('#SCKelvin');
-let SCNico = document.querySelector('#SCNico');
-let SCLeo = document.querySelector('#SCLeo');
-let SCLucien = document.querySelector('#SCLucien');
-let SCGaby = document.querySelector('#SCGaby');
-let SCEttore = document.querySelector('#SCEttore');
-
 boutonLancerDe.addEventListener('click', function() {
-    imgGris.style.display = 'none';
     let res = Math.round(Math.random()*5 + 1);
     let event;
     let SCcompteur;
@@ -10907,7 +11491,7 @@ boutonLancerDe.addEventListener('click', function() {
             imgDe6.style.display = 'none';
             event = Math.round(Math.random()*(eventsSoiree.length - 1));
             switch (event) {
-                case 6 :
+                case 7 :
                     switch (joueurs[SCcompteur]) {
                         case 'Anat' :
                             SCAnat.innerHTML = parseInt(SCAnat.innerHTML) - 1;
@@ -10943,6 +11527,48 @@ boutonLancerDe.addEventListener('click', function() {
                             break;
                         case 'Kelvin' :
                             SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) - 1;
+                            break;
+                        default :
+                            break;
+                    }
+                    break;
+                case 8 :
+                    switch (joueurs[SCcompteur]) {
+                        case 'Anat' :
+                            SCAnat.innerHTML = parseInt(SCAnat.innerHTML) + 1;
+                            break;
+                        case 'Antho' :
+                            SCAntho.innerHTML = parseInt(SCAntho.innerHTML) + 1;
+                            break;
+                        case 'Doume' :
+                            SCDoume.innerHTML = parseInt(SCDoume.innerHTML) + 1;
+                            break;
+                        case 'Mathis' :
+                            SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                            break;
+                        case 'Loic' :
+                            SCLoic.innerHTML = parseInt(SCLoic.innerHTML) + 1;
+                            break;
+                        case 'Mathis' :
+                            SCMathis.innerHTML = parseInt(SCMathis.innerHTML) + 1;
+                            break;
+                        case 'Nico' :
+                            SCNico.innerHTML = parseInt(SCNico.innerHTML) + 1;
+                            break;
+                        case 'Leo' :
+                            SCLeo.innerHTML = parseInt(SCLeo.innerHTML) + 1;
+                            break;
+                        case 'Gaby' :
+                            SCGaby.innerHTML = parseInt(SCGaby.innerHTML) + 1;
+                            break;
+                        case 'Lucien' :
+                            SCLucien.innerHTML = parseInt(SCLucien.innerHTML) + 1;
+                            break;
+                        case 'Ettore' :
+                            SCEttore.innerHTML = parseInt(SCEttore.innerHTML) + 1;
+                            break;
+                        case 'Kelvin' :
+                            SCKelvin.innerHTML = parseInt(SCKelvin.innerHTML) + 1;
                             break;
                         default :
                             break;
@@ -11730,7 +12356,7 @@ let eventsSoiree = [
     "Tu fumes un dragon : bois 3 gorgées, Kelvin, Leo et Ettore immunisés",
     "Tu pars en soirée chez Nico : bois 3 gorgées.",
     "Nico aboie sur ta cible : ta streetcred diminue, Nico immunisé.",
-    "Tu pecho : bois 2 gorgées, ta streecred augmente.",
+    "Tu pecho : bois 2 gorgées, ta streetcred augmente.",
     "Tu chiches : bois 2 gorgées, Anat, Leo et Kelvin immunisés.",
     "Cuite au Ricard : ceux qui boivent du Ricard boivent 4 gorgées.",
     "Cuite à la bière : ceux qui boivent de la bière boivent 4 gorgées.",
@@ -11854,7 +12480,3 @@ let eventsSpe = [
     "Anat commence la danse du chômage : la streetcred d'Anat diminue.",
     "Thib vient de finir sa 10ème soirée : Thib boit 2 gorgées."
 ]
-
-/* Tableau qui affiche la streetcred */
-let tableau = document.querySelector('#tableau');
-tableau.hidden = true;
